@@ -13,6 +13,4 @@ test(){
 }
 
 
-ssh "$SERVER_IP" "$(test && echo 'Success' || echo 'Failure')"
-
-# ssh $SERVER_IP 'ls && echo "Success" || echo "Failure"'
+ssh $SERVER_IP '$(test) && echo "Success" || echo "Failure"'
