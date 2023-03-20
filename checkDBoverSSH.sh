@@ -25,6 +25,21 @@ echo "PathBackUp: ${result_array[2]}"
 echo "Filename: ${result_array[3]}"
 
 
+# Check alert 
+filename=${result_array[3]}
+filedate=${filename:11:10}   # lấy chuỗi ngày/tháng/năm từ tên file
+today=$(date +%Y_%m_%d)      # lấy ngày hiện tại
+
+
+echo $filedate
+
+if [ "$filedate" == "$today" ]; then
+  echo "The file was created today"
+else
+  echo "The file was not created today"
+fi
+
+
 SUCCESS="
 ==[BACKUP-SUCCESS]==
 Server: ${result_array[1]}
