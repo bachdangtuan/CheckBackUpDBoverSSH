@@ -9,7 +9,7 @@ SERVER_IP='10.0.0.121'
 # Function check status postGres
 
 test() {
-  echo "test"
+  mkdir test
 }
 
 function check_server() {
