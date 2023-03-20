@@ -35,13 +35,6 @@ echo $filedate
 echo $nameDatabase
 
 
-if [ "$filedate" == "$today" ]; then
-  alertTelegramSuccess
-else
-  alertTelegramError
-fi
-
-
 SUCCESS="
 ==[BACKUP-SUCCESS]==
 Server: ${result_array[1]}
@@ -74,3 +67,11 @@ curl -s -X POST $URL \
 --data-urlencode "text=$ERROR" \
 -d "parse_mode=HTML"
 }
+
+
+# Send Telegram
+if [ "$filedate" == "$today" ]; then
+  alertTelegramSuccess
+else
+  alertTelegramError
+fi
