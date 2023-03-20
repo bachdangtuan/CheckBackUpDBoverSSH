@@ -4,19 +4,9 @@
 
 # Variable
 SERVER_IP='10.0.0.121'
+COMMAND='
+    echo "thành công"
 
+'
 
-# Function check status postGres
-
-test() {
-    echo "Chạy tành công"
-}
-
-check_server() {
-  local command=$(test)
-  ssh "$SERVER_IP" "$command"
-}
-check_server
-
-
-# ssh $SERVER_IP '$(test) && echo "Success" || echo "Failure"'
+ssh $SERVER_IP $COMMAND
