@@ -8,9 +8,10 @@ SERVER_IP='10.0.0.121'
 
 # Function check status postGres
 
-test(){
-    echo "test"
+test() {
+  echo "test"
 }
 
+ssh "$SERVER_IP" '$(test) && echo "Success" || echo "Failure"'
 
-ssh $SERVER_IP '$(test) && echo "Success" || echo "Failure"'
+# ssh $SERVER_IP '$(test) && echo "Success" || echo "Failure"'
