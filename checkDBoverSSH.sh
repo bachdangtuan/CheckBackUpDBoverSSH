@@ -38,16 +38,16 @@ echo $nameDatabase
 SUCCESS="
 ==[BACKUP-SUCCESS]==
 Server: ${result_array[1]}
-Database: ${DB_NAME}
+Database: ${nameDatabase}
 Address IP :${result_array[0]}/24
 Nguyen nhan: Backup Dump thanh cong databases !
 "
 
 ERROR="
 ==[BACKUP-ERROR]==
-Server: ${result_array[1]}
-Database: ${DB_NAME}
-Address IP :${result_array[0]}/24
+Server: ${result_array[0]}
+Database: ${nameDatabase}
+Address IP :${result_array[1]}/24
 Content: Backup backup du lieu khong thanh cong !
 --------
 Nguyen nhan: Backup DB backup bi ngat giua chung, quyen truy cap sai, khong co db, chua backup
