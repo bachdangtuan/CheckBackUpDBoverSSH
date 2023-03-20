@@ -9,14 +9,14 @@ SERVER_IP='10.0.0.121'
 # Function check status postGres
 
 test() {
-  mkdir test
+    echo "Chạy tành công"
 }
 
-function check_server() {
+check_server() {
   local command=$(test)
   ssh "$SERVER_IP" "$command"
 }
-
+check_server
 
 
 # ssh $SERVER_IP '$(test) && echo "Success" || echo "Failure"'
