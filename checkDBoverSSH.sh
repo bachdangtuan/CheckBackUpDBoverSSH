@@ -5,4 +5,14 @@
 # Variable
 SERVER_IP='10.0.0.121'
 
-ssh $SERVER_IP 'ls && echo "Success" || echo "Failure"'
+
+# Function check status postGres
+
+checkStatusPostGre(){
+    service patroni status
+}
+
+
+ssh $SERVER_IP `$checkStatusPostGre && echo "Success" || echo "Failure"`
+
+# ssh $SERVER_IP 'ls && echo "Success" || echo "Failure"'
