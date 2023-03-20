@@ -12,6 +12,11 @@ test() {
   echo "test"
 }
 
-ssh "$SERVER_IP" '$(test) && echo "Success" || echo "Failure"'
+function check_server() {
+  local command=$(test)
+  ssh "$SERVER_IP" "$command"
+}
+
+
 
 # ssh $SERVER_IP '$(test) && echo "Success" || echo "Failure"'
