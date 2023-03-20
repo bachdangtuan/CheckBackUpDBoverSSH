@@ -7,10 +7,12 @@ SERVER_IP='10.0.0.121'
 TOKEN="6112203391:AAEuDTYX3KQRNuoLKuJ0NAtpRoamdHIQQkA"
 CHAT_ID="-957135587"
 URL="https://api.telegram.org/bot${TOKEN}/sendMessage"
+PATH_SCRIPT="/root/scriptCheck"
+POST=22
 
 # Gọi script tại server đã được SSH vào
 # ketqua=$(ssh "$SERVER_IP" "bash /root/scriptCheck/myscript.sh")
-ketqua=$(sshpass -p 123456 ssh root@"$SERVER_IP" "bash /root/scriptCheck/myscript.sh"  -p 22)
+ketqua=$(sshpass -p 123456 ssh root@"$SERVER_IP" "bash $PATH_SCRIPT/myscript.sh"  -p $POST)
 
 #read -r result_var <<< "$ketqua"
 readarray -t result_array <<< "$ketqua"
