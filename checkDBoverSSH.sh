@@ -13,6 +13,6 @@ checkStatusPostGre(){
 }
 
 
-ssh $SERVER_IP `$checkStatusPostGre && echo "Success" || echo "Failure"`
+ssh "$SERVER_IP" "$(checkStatusPostGre && echo 'Success' || echo 'Failure')"
 
 # ssh $SERVER_IP 'ls && echo "Success" || echo "Failure"'
