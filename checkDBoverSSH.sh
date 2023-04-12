@@ -3,7 +3,7 @@
 ## Điều kiện bắt buộc phải có SSH key
 
 # Variable
-SERVER_IP='183.80.255.19'
+SERVER_IP='x.x.x.x'
 TOKEN="6112203391:AAEuDTYX3KQRNuoLKuJ0NAtpRoamdHIQQkA"
 CHAT_ID="-957135587"
 URL="https://api.telegram.org/bot${TOKEN}/sendMessage"
