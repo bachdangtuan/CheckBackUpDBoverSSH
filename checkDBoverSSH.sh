@@ -12,7 +12,7 @@ POST=22
 
 # Gọi script tại server đã được SSH vào
 #ketqua=$(ssh "$SERVER_IP" "bash /root/scriptCheck/myscript.sh")
-ketqua=$(sshpass -p CCong#r0Ot@2023* ssh -p 2127 root@183.80.255.19 'cd /root/scriptCheck && bash check_isofh_pay.sh')
+ketqua=$(sshpass -p <mật khẩu> ssh -p 2127 root@x.x.x.x 'cd /root/scriptCheck && bash check_isofh_pay.sh')
 
 #echo $ketqua
 
